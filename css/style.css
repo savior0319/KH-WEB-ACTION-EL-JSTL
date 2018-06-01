@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* layout */
+#header {
+    height:200px;
+    background-color:skyblue;
+}
+
+/* Container */
+.container {
+    padding-top:50px;
+    width:1200px;
+    margin:0 auto;
+    background-color:green;
+    position:relatvie;
+}
+
+/* quick */
+.quick span {
+    font-size:40px;
+    color:white;
+    display: inline;
+}
+
+.quick input{
+}
