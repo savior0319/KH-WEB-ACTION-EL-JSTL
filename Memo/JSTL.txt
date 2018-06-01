@@ -131,5 +131,12 @@ items       반복 할 객체명 (Collection 객체)
 begin       반복이 시작 할 요소 번호(0..1..2..3..n)
 end         반복이 끝나는 요소 번호
 step        반복할 횟수 반환
-var         현재 반복 횟수에 해당하는 변수의 이름
-varStatus   현재 반복에 해당하는 객체의 요소
+var         현재 반복에 해당하는 객체의 요소
+varStatus   현재 반복 횟수에 해당하는 변수의 이름
+
+ex)
+<c:forEach items="${list}" var="m">
+    이름 : ${m.name}<br>
+    나이 : ${m.age}<br>
+    주소 : ${m.address}<br>
+</c:forEach>
