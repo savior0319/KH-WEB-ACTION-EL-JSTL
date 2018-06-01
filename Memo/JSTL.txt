@@ -100,3 +100,36 @@ escapeXml="false"   태그형식의 문자를 태그로 출력하게 만드는 �
  ex) <c:remove var="num1" scope="request" />
  -> request 영역에 있는 num1이라는 변수를 제거함
  -> 만약 scope를 지정하지 않게 되면 모든 scope 영역에 있는 num1 이라는 변수를 삭제함
+
+ ## <c:if> 태그 ##
+ -> 자바 프로그램의 if문과 비슷한 역할을 하는 태그
+ -> <c:if>태그에서 조건식은 test라는 속성의 값으로 지정해야 함
+ -> 이 때 조건식은 반드시 EL 형식으로 기술함
+
+ ex)
+
+ <c:if test="${num1>num2}">
+    num1이 더 큽니다..
+ </c:if>
+
+<c:if> 속성
+test="값(true | false)"     test 값을 기준으로 실행여부 결정 (조건절)
+var="값"                    test 결과 값을 저장하는 변수 속성
+scope                      범위(session, request, page)
+</c:if>
+
+
+## <c:choose> 태그 ##
+-> 자바 프로그램의 switch문과 비슷한 역할 (else~if 문과 매우 흡사함)
+-> <c:when>, <c:otherwise> 태그와 함께 사용되며
+각 각 switch문의 case와 default문과 비슷한 역할
+
+## <c:forEach> 태그 ##
+-> 자바의 for, for-in 문에 해당하는 기능을 제공
+
+items       반복 할 객체명 (Collection 객체)
+begin       반복이 시작 할 요소 번호(0..1..2..3..n)
+end         반복이 끝나는 요소 번호
+step        반복할 횟수 반환
+var         현재 반복 횟수에 해당하는 변수의 이름
+varStatus   현재 반복에 해당하는 객체의 요소

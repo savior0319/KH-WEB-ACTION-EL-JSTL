@@ -43,7 +43,8 @@
 		<br>
 		<hr>
 		<h1>JSTL Tag</h1>
-		<a href="/views/jstl/jstl_basic1.jsp">1. JSTL 기초1</a>
+		<a href="/views/jstl/jstl_basic1.jsp">1. JSTL 기초1</a><br>
+		<a href="/views/jstl/jstl_basic2.jsp">1. JSTL 기초2(forEach)</a><br>
 
 
 	</div>

@@ -34,13 +34,14 @@
 	${a} + ${b} = ${a+b}
 	<br>
 
+	<c:set var="c" value="200" />
 	<c:set var="c" value="300" scope="request" />
 	<!-- request 영역에 저장 -->
-	<c:set var="d" value="400" scope="session" />
+	<c:set var="c" value="400" scope="session" />
 	<!-- session 영역에 저장 -->
-	값 출력 : ${requestScope.a}
+	값 출력 : ${requestScope.c}
 	<br>
-	값 출력 : ${sessionScope.a}
+	값 출력 : ${sessionScope.c}
 	<br>
 	c:out으로 출력 :
 	<c:out value="${a}" />
@@ -60,6 +61,37 @@
 	<br>
 	<c:out value="<%=desc2%>" escapeXml="false" />
 
+	<c:remove var="c" />
+	<!-- 변수를 지울 때 사용 -->
+
+	<c:set var="num1" value="100"></c:set>
+	<c:set var="num2" value="200"></c:set>
+
+	<br>
+	<br>
+
+	<!-- 조건식 if -->
+	<c:if test="${num1>num2}" var="result">
+		num1이 더 큽니다
+	</c:if>
+
+	결과 : ${result}
+	<br>
+	<br>
+	<c:set var="choice" value="1112"></c:set>
+
+	<!-- 조건식 choose -->
+	<c:choose>
+		<c:when test="${choice==1}">
+		1을 선택했습니다
+	</c:when>
+		<c:when test="${choice==2}">
+		2을 선택했습니다
+	</c:when>
+		<c:otherwise>
+		다른 수를 선택 했습니다
+	</c:otherwise>
+	</c:choose>
 
 </body>
 </html>
