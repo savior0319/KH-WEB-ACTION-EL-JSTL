@@ -21,7 +21,8 @@
 <body>
 	<h1>JSTL 기초2</h1>
 	<br>
-
-
+	<c:forEach begin="1" end="10" var="i">
+		${i}<br>
+	</c:forEach>
 </body>
 </html>
