@@ -135,7 +135,8 @@ var         현재 반복에 해당하는 객체의 요소
 varStatus   현재 반복 횟수에 해당하는 변수의 이름
 
 ex)
-<c:forEach items="${list}" var="m">
+<c:forEach begin="0" items="${list}" var="m" varStatus="i">
+    ${i.count} 번째 학생
     이름 : ${m.name}<br>
     나이 : ${m.age}<br>
     주소 : ${m.address}<br>
